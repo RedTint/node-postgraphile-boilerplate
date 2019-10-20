@@ -14,12 +14,8 @@ This repository contains:
 ## Table of Contents
 
 - [Background](#background)
-- [Install](#install)
 - [Usage](#usage)
-	- [Generator](#generator)
-- [Badge](#badge)
-- [Example Readmes](#example-readmes)
-- [Related Efforts](#related-efforts)
+	- [Modifying the Schema](#modifying-the-schema)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
 - [License](#license)
@@ -28,13 +24,6 @@ This repository contains:
 
 Everybody wants to quickly set up their Backend APIs. As such, this repo was made exactly for that purpose. Th
 
-## Install
-
-This project uses [node](http://nodejs.org) and [npm](https://npmjs.com). Go check them out if you don't have them locally installed.
-
-```sh
-$ npm install --global standard-readme-spec
-```
 
 ## Usage
 
@@ -51,7 +40,8 @@ Upon seeing the above interface, you should be able to start working on your fro
 
 ### Modifying the Schema
 
-All scripts can be found [here]()
+I have only created a sample database schema to get you up and running.
+Feel free to add scripts [here]()
 
 ## Maintainers
 
