@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+    api:
+        build: ./api # Looks for the Dockerfile within the working directory (./api)
+        container_name: project-api
+        depends_on:
+            - db
+        environment:
+            API_PORT: $API_PORT
+            POSTGRES_DB: $DB_NAME
+            DB_ADMIN_USER: $DB_ADMIN_USER
+            DB_ADMIN_PASS: $DB_ADMIN_PASS
+            DB_HOST: $DB_HOST
+            DB_PORT: $DB_PORT
+            DB_READONLY_USER: $DB_READONLY_USER
+            DB_READONLY_PASS: $DB_READONLY_PASS
+            DB_WRITE_USER: $DB_WRITE_USER
+            DB_WRITE_PASS: $DB_WRITE_PASS
+            DB_DEFAULT_SCHEMA: $DB_DEFAULT_SCHEMA
+        volumes:
+            - /usr/src/api/node_modules # Saves the node modules so it does not have to re-install
+            - ./api:/usr/src/api # Mounts the host folder(s) onto the docker container for live development
+        ports:
+            - "3000:3000"
+
+    db:
+        build: ./db
+        container_name: project-db
+        environment:
+            POSTGRES_DB: $DB_NAME
+            POSTGRES_USER: $DB_ADMIN_USER #image default user
+            POSTGRES_PASSWORD: $DB_ADMIN_PASS #image default pass
+            DB_ADMIN_USER: $DB_ADMIN_USER
+            DB_ADMIN_PASS: $DB_ADMIN_PASS
+            DB_HOST: $DB_HOST
+            DB_PORT: $DB_PORT
+            DB_READONLY_USER: $DB_READONLY_USER
+            DB_READONLY_PASS: $DB_READONLY_PASS
+            DB_WRITE_USER: $DB_WRITE_USER
+            DB_WRITE_PASS: $DB_WRITE_PASS
+            DB_DEFAULT_SCHEMA: $DB_DEFAULT_SCHEMA
+        ports:
+            - "5432:5432"

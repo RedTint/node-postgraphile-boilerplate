@@ -1,0 +1,13 @@
+API_PORT=3000
+APP_PORT=80
+DOMAIN=sample_db
+DB_HOST=project-db
+DB_PORT=5432
+DB_NAME=sample_db
+DB_DEFAULT_SCHEMA=core
+DB_ADMIN_USER=root
+DB_ADMIN_PASS=password
+DB_READONLY_USER=sample_db-read
+DB_READONLY_PASS=password
+DB_WRITE_USER=sample_db-write
+DB_WRITE_PASS=password
