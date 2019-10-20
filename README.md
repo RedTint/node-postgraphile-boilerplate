@@ -41,7 +41,7 @@ Upon seeing the above interface, you should be able to start working on your fro
 ### Modifying the Schema
 
 I have only created a sample database schema to get you up and running.
-Feel free to add scripts [here]()
+Feel free to add scripts [here](https://github.com/RedTint/node-postgraphile-boilerplate/tree/master/db/scripts)
 
 ## Maintainers
 
