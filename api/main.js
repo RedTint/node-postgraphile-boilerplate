@@ -12,8 +12,7 @@ const { postgraphile } = require('postgraphile');
 
 const config = require('./config/config.js');
 const { user, password, host, database, port, default_schema } = config.database;
-console.log(process.env);
-console.log(config.database);
+
 const app = express();
 app.use(
     postgraphile(
